@@ -26,4 +26,12 @@ class Song
     @@artists.uniq
   end
 
+  def self.genre_count
+    #genre.count = {}
+    @@genres.each_with_object(Hash.new(0)) {|genre, count| count[genre] +=1}
+  end
+
+  def self.artist_count
+    artist.count = {}
+  end
 end
